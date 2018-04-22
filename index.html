@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Audio and Video</title>
+	<style type="text/css">
+		.audioClass, .videoClass{
+			color: orange;
+			font-weight: bold;
+			border: 5px solid green;
+			margin:10px 5px;
+			width: 360px;
+		}
+
+		video{
+			width: 300px;
+
+		}
+	</style>
+</head>
+<body>
+	<section class="audioClass">
+		<h2>Audio Song</h2>
+		<hr />
+		<audio controls>
+			<source src="./Media/shohor.mp3" type="audio/mpeg" autoplay='false'>
+			your browser does not support the <code>audio</code> element
+
+		</audio>
+	</section>
+
+	<section class="videoClass">
+		<p>Video Song</p><hr />
+		<video controls>
+			<source src="./Media/Ek Ladki.mp4" type="video/mp4" autoplay='false'>
+			your browser does not support the <code>video</code> element
+
+		</video>
+	</section>
+
+	<script>
+		var audio;
+		// window.addEventListener('load', audioInit, false);
+		function audioInit(){
+			audio = document.getElementsByTagName('audio')[0];
+			audio.play();
+		}
+
+
+
+		var video;
+		function videoInit(){
+			video = document.getElementsByTagName('video')[0];
+			video.play();
+		}
+
+
+	</script>
+</body>
+</html>
